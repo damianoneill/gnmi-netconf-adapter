@@ -3,16 +3,14 @@ module github.com/onosproject/gnmi-netconf-adapter
 go 1.13
 
 require (
-	github.com/go-playground/overalls v0.0.0-20191218162659-7df9f728c018
-	github.com/golangci/golangci-lint v1.22.2
-	github.com/mattn/goveralls v0.0.2
-	github.com/mcubik/goverreport v0.0.0-20191216230919-2c39979b976a
 	github.com/mitchellh/go-homedir v1.1.0
-	github.com/olekukonko/tablewriter v0.0.4 // indirect
 	github.com/spf13/cobra v0.0.5
+	github.com/spf13/pflag v1.0.5 // indirect
 	github.com/spf13/viper v1.6.1
-	github.com/yookoala/realpath v1.0.0 // indirect
-	golang.org/x/lint v0.0.0-20191125180803-fdd1cda4f05f
-	gopkg.in/go-playground/assert.v1 v1.2.1 // indirect
+	github.com/stretchr/testify v1.4.0 // indirect
+	golang.org/x/sys v0.0.0-20190922100055-0a153f010e69 // indirect
+	golang.org/x/text v0.3.2 // indirect
+	gopkg.in/check.v1 v1.0.0-20190902080502-41f04d3bba15 // indirect
+	gopkg.in/yaml.v2 v2.2.7 // indirect
 	k8s.io/klog v1.0.0
 )

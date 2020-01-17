@@ -132,7 +132,7 @@ tidy: tests ; $(info $(M) modules tidy...) @ ## Common run test before and after
 	make tests
 
 .PHONY: license_check
-license_check: ; $(info $(M) running license check...) @ ## examine and ensure license headers exist
+license_check: ; $(info $(M) running license check...) @ ## Common examine and ensure license headers exist
 	$Q @if [ ! -d "../build-tools" ]; then cd .. && git clone https://github.com/onosproject/build-tools.git; fi
 	$Q ./../build-tools/licensing/boilerplate.py -v --rootdir=$(CURDIR)
 
