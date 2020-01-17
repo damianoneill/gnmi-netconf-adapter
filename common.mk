@@ -77,7 +77,7 @@ build: $(BIN) ; $(info $(M) building executable...) @ ## Common build program bi
 		-o $(BIN)/$(basename $(MODULE)) main.go
 
 .PHONY: all
-all: fmt lint license_check build ; $(info $(M) building all...) @ ## Common format, lint and build binary
+all: license_check fmt lint test build ; $(info $(M) building all...) @ ## Common checks, format and build binary
 
 .PHONY: docker-$(PRJ_NAME)
 docker-$(PRJ_NAME): ; $(info $(M) building docker image...) @ ## Common build docker image
@@ -98,7 +98,7 @@ test-short:   ARGS=-short        ## Common run only short tests
 test-verbose: ARGS=-v            ## Common run tests in verbose mode with coverage reporting
 test-race:    ARGS=-race         ## Common run tests with race detector
 $(TEST_TARGETS): NAME=$(MAKECMDGOALS:test-%=%)
-test: fmt lint ; $(info $(M) running $(NAME:%=% )tests...) @ ## Common run tests
+test: ; $(info $(M) running $(NAME:%=% )tests...) @ ## Common run tests
 	$Q $(GO) test -timeout $(TIMEOUT)s $(ARGS) $(TESTPKGS)
 
 COVERAGE_MODE    = atomic
@@ -127,9 +127,9 @@ fmt: ; $(info $(M) running gofmt...) @ ## Common run gofmt on all source files
 	$Q $(GO) fmt $(PKGS)
 
 .PHONY: tidy
-tidy: tests ; $(info $(M) modules tidy...) @ ## Common run test before and after go mod tidy
+tidy: test ; $(info $(M) modules tidy...) @ ## Common run test before and after go mod tidy
 	$Q $(GO) mod tidy
-	make tests
+	make test
 
 .PHONY: license_check
 license_check: ; $(info $(M) running license check...) @ ## Common examine and ensure license headers exist
