@@ -9,5 +9,7 @@
 
 gNMI NETCONF Adapter is a Microservice that consumes gNMI requests from ONOS Config, marshallings them to XML Payloads and forwards them to NETCONF capable functions, for e.g. Devices such as Routers/Switch or software simulating these functions.
 
-You can find all the documentation under [docs](docs).  
-A good place to start is the [README](docs/README.md).
+A useful place to start with documentation is the ONOS Contributing guide or this projects prerequisite document.
+
+- [Contributing to ONOS Project](https://docs.onosproject.org/developers/contributing/)
+- [prerequisite](./docs/prerequisite.md)

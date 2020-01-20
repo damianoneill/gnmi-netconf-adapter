@@ -1,8 +1,7 @@
-# Contributing to gnmi-netconf-adapter
+# Prerequisites required for gnmi-netconf-adapter
 
-More comprehensive documentation is available here:
+Please ensure that your are familiar with the developer workflow:
 
-- [Contributing to ONOS Project](https://docs.onosproject.org/developers/contributing/)
 - [Developer Workflow](https://docs.onosproject.org/developers/dev_workflow/)
 
 ## Overriding the build variables
